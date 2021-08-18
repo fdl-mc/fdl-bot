@@ -29,7 +29,7 @@ final _tradeCommandOptions = [
 ];
 
 final CommandExecution _tradeCommandExecution = (event) async {
-  final channel = await bot.fetchChannel<TextChannel>(suggestsChannelId);
+  final channel = await bot.fetchChannel<TextChannel>(tradeChannelId);
   final willGive = event.interaction.getArg('отдам').value as String;
   final willGet = event.interaction.getArg('получу').value as String;
 
