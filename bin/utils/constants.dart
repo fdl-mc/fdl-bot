@@ -9,6 +9,5 @@ final pingChannelId = Snowflake(825926055620771890);
 final channelStateId = Snowflake(825931028106838016);
 
 // Text channels
-// TODO: replace with correct channels
-final suggestsChannelId = Snowflake(705984749717422082);
-final tradeChannelId = Snowflake(705984749717422082);
+final suggestsChannelId = Snowflake(719558307798581278);
+final tradeChannelId = Snowflake(730431266394210354);
