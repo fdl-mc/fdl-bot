@@ -1,0 +1,30 @@
+name: Dart
+
+on:
+  push:
+   # The jobs will trigger on every main branch push
+    branches: [ main ]
+  pull_request:
+    # The jobs will trigger on every PR to the main branch
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: dart-lang/setup-dart@v1.2
+
+      - name: Install dependencies
+        run: dart pub get
+
+      - name: Verify formatting
+        run: dart format --output=none --set-exit-if-changed .
+
+      - name: Analyze project source
+        run: dart analyze
+      
+      # There are no tests so I commented this
+      #- name: Run tests
+      #  run: dart test
