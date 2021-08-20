@@ -22,6 +22,7 @@ EmbedBuilder buildSuggestionEmbed({
 EmbedBuilder buildTradeEmbed({
   required String willGive,
   required String willGet,
+  String? additionalInfo,
   required User author,
 }) {
   var embed = EmbedBuilder();
@@ -34,7 +35,11 @@ EmbedBuilder buildTradeEmbed({
     ..addField(name: 'Отдам', content: willGive)
     ..addField(name: 'Получу', content: willGet);
 
-  embed.color = DiscordColor.springGreen;
+  if (additionalInfo != null) {
+    embed.addField(name: 'Доп. информация', content: additionalInfo);
+  }
+
+  embed.color = DiscordColor.cyan;
 
   return embed;
 }
