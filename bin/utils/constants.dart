@@ -11,3 +11,7 @@ final channelStateId = Snowflake(825931028106838016);
 // Text channels
 final suggestsChannelId = Snowflake(719558307798581278);
 final tradeChannelId = Snowflake(730431266394210354);
+
+final cacheOptions = CacheOptions()
+  ..userCachePolicyLocation = CachePolicyLocation.none()
+  ..memberCachePolicyLocation = CachePolicyLocation.none();

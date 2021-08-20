@@ -4,6 +4,7 @@ import 'package:nyxx_interactions/interactions.dart';
 import 'commands/suggest_command.dart';
 import 'commands/trade_command.dart';
 import 'utils/builders.dart';
+import 'utils/constants.dart';
 import 'utils/instances.dart';
 
 void main(List<String> arguments) {
@@ -13,6 +14,7 @@ void main(List<String> arguments) {
     options: ClientOptions(
       initialPresence: initialPresence,
     ),
+    cacheOptions: cacheOptions,
   );
 
   interactions = Interactions(bot)
