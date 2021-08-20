@@ -38,7 +38,7 @@ final CommandExecution _tradeCommandExecution = (event) async {
   final willGive = event.interaction.getArg('отдам').value as String;
   final willGet = event.interaction.getArg('получу').value as String;
   final additionalInfo = event.interaction.getArg('дополнительно') != null
-      ? event.interaction.getArg('получу').value
+      ? event.interaction.getArg('дополнительно').value
       : null;
 
   final msg = await channel.sendMessage(
