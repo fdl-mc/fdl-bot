@@ -1,3 +1,4 @@
+import 'package:fdl_api/fdl_api.dart';
 import 'package:nyxx/nyxx.dart';
 import 'package:nyxx_interactions/interactions.dart';
 
@@ -6,6 +7,7 @@ import 'commands/trade_command.dart';
 import 'utils/builders.dart';
 import 'utils/constants.dart';
 import 'utils/instances.dart';
+import 'workers/server_state_updater.dart';
 
 void main(List<String> arguments) {
   bot = Nyxx(
@@ -16,6 +18,8 @@ void main(List<String> arguments) {
     ),
     cacheOptions: cacheOptions,
   );
+
+  updateState(FdlApi('igorechek.ddns.net:3000'), bot);
 
   interactions = Interactions(bot)
     ..registerSlashCommand(suggestCommand)
