@@ -22,6 +22,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.15.0"
+  fdl_api:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: def774c07cdecdb0087b81a4a373f6dc3ab34987
+      url: "https://github.com/fdl-mc/fdl-api-dart"
+    source: git
+    version: "1.0.0"
   http:
     dependency: transitive
     description:
