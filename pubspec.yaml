@@ -10,7 +10,6 @@ environment:
 dev_dependencies:
     pedantic: ^1.10.0
 dependencies:
-    nyxx: ^2.0.0-rc.13
-    nyxx_interactions: ^2.0.0-rc.20
-    fdl_api:
-        git: https://github.com/fdl-mc/fdl-api-dart
+    dart_minecraft: ^0.4.0
+    nyxx: ^2.1.2
+    nyxx_interactions: ^2.0.3

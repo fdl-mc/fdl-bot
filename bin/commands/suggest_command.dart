@@ -1,7 +1,7 @@
 import 'package:nyxx/nyxx.dart';
 import 'package:nyxx_interactions/interactions.dart';
 
-import '../utils/constants.dart';
+import '../utils/config.dart';
 import '../utils/instances.dart';
 import '../utils/typedefs.dart';
 import '../utils/utils.dart';
@@ -29,10 +29,8 @@ final _suggestCommandOptions = [
 
 final CommandExecution _suggestCommandExecution = (event) async {
   final channel = await bot.fetchChannel<TextChannel>(suggestsChannelId);
-  final title = event.interaction.getArg('заголовок').value as String;
-  final description = event.interaction.getArg('описание') is InteractionOption
-      ? event.interaction.getArg('описание').value
-      : null;
+  final title = event.interaction.getArg('заголовок') as String;
+  final description = event.interaction.getArg('описание') as String?;
   print(description);
 
   final msg = await channel.sendMessage(

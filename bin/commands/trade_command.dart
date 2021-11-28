@@ -1,7 +1,7 @@
 import 'package:nyxx/nyxx.dart';
 import 'package:nyxx_interactions/interactions.dart';
 
-import '../utils/constants.dart';
+import '../utils/config.dart';
 import '../utils/instances.dart';
 import '../utils/typedefs.dart';
 import '../utils/utils.dart';
